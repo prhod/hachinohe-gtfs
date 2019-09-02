@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  otp:
+    image: "openjdk:14-ea-jdk"
+    ports: 
+      - 8080:8080
+      - 8081:8082
+    volumes:
+      - ./data:/otp_data/
+      - ./otp-1.4.0-shaded.jar:/otp-1.4.0-shaded.jar
+    #entrypoint: /bin/sh
+    #command: "java -Xmx2G -jar /otp-1.4.0-shaded.jar --build /otp_data --inMemory" 
+    command: ["sh", "-c", "cd / && java -Xmx2G -jar /otp-1.4.0-shaded.jar --build /otp_data --inMemory"]

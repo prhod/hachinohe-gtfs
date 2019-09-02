@@ -1,0 +1,10 @@
+[package]
+name = "rpdf2gtfs"
+version = "0.1.0"
+authors = ["Pascal Rhod <pascal.rhod@kisio.com>"]
+edition = "2018"
+
+[dependencies]
+pdf = "0.6.3"
+pdf-extract = "0.5.1"
+lopdf = "0.22"
